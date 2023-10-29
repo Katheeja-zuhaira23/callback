@@ -1,22 +1,33 @@
-(function () {
-    const countdown = (num, callback) => {
-      if (num > 0) {
-        const countdownElement = document.getElementById("countdown");
-        countdownElement.innerText = num;
-        setTimeout(() => {
-          countdown(num - 1, callback);
+setTimeout(function () {
+    document.getElementById("countdown").innerHTML = "10";
+    setTimeout(function () {
+      document.getElementById("countdown").innerHTML = "9";
+      setTimeout(function () {
+        document.getElementById("countdown").innerHTML = "8";
+        setTimeout(function () {
+          document.getElementById("countdown").innerHTML = "7";
+          setTimeout(function () {
+            document.getElementById("countdown").innerHTML = "6";
+            setTimeout(function () {
+              document.getElementById("countdown").innerHTML = "5";
+              setTimeout(function () {
+                document.getElementById("countdown").innerHTML = "4";
+                setTimeout(function () {
+                  document.getElementById("countdown").innerHTML = "3";
+                  setTimeout(function () {
+                    document.getElementById("countdown").innerHTML = "2";
+                    setTimeout(function () {
+                      document.getElementById("countdown").innerHTML = "1";
+                      setTimeout(function () {
+                        document.getElementById("countdown").innerHTML = "HAPPY INDEPENDENCE DAY!!";
+                      }, 1000);
+                    }, 1000);
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }, 1000);
+          }, 1000);
         }, 1000);
-      } else {
-        callback();
-      }
-    };
-
-    const showMessage = () => {
-      const countdownContainer = document.getElementById("countdown-container");
-      const messageElement = document.getElementById("message"); 
-      countdownContainer.style.display = "none";
-      messageElement.innerText = "HAPPY INDEPENDENCE DAY!!";
-    };
-
-    countdown(10, showMessage);
-  })(); 
+      }, 1000);
+    }, 1000);
+  }, 1000);
